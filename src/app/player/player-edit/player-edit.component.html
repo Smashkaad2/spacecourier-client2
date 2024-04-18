@@ -1,0 +1,9 @@
+<div>
+    <form (ngSubmit)="actualizarPlayer()">
+        <input type="text" name="Username" id="txtUsername" [(ngModel)]="player.username">
+        <input type="text" name="Rol" id="txtNombre" [(ngModel)]="player.rol">
+        <button type="submit">
+            Guardar
+        </button>
+    </form>
+</div>

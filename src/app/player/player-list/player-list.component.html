@@ -1,0 +1,23 @@
+<div>
+    <h1>CHOOSE YOUR PLAYER</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Rol</th>
+                <th>Ver</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of players">
+                <td>{{player.id}}</td>
+                <td>{{player.username}}</td>
+                <td>{{player.rol}}</td>
+                <td><a [routerLink]="['/player/select', player.id]">Elegir</a></td>
+                <td><a [routerLink]="['/player/edit', player.id]">Editar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

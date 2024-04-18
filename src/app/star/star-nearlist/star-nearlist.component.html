@@ -1,0 +1,19 @@
+<div>
+    <h1>CHOOSE YOUR STARS</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Viajar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let star of stars.slice(0, 10)">
+                <td>{{star.id}}</td>
+                <td>{{star.nombre_estrella}}</td>
+                <td><a [routerLink]="['/star/view', player.id, star.id]">Elegir</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

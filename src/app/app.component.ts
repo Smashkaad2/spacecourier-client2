@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
-  title = 'spacecourier-client2';
+  title = 'spaceCourier-client';
+  nombre: string = 'Javier';
+  jugadores: string[] = ['Javier','Jp','Gordo','Yoryo'];
 }

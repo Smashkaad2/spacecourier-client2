@@ -1,0 +1,25 @@
+<div>
+    <h1>Products</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Producto</th>
+                <th>Descripcion</th>
+                <th>Demanda</th>
+                <th>Stock</th>
+                <th>Comprar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.nombreProducto}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.factor_Demanda}}</td>
+                <td>{{product.stock}}</td>
+                <td><a [routerLink]="['/player/list']">Buy</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
