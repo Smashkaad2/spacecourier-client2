@@ -5,27 +5,29 @@
     <ul>
         <li>Nombre Planeta: {{planet.nombrePlaneta}}</li>
     </ul>
-    <app-product-view></app-product-view>
 
-    <!-- <table>
+    <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th></th>
-                <th>Descripcion</th>
+                <th>Productos</th>
+                <th>factor_Demanda</th>
+                <th>Stock</th>
                 <th>Viajar</th>
 
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let planet of planets">
-                <td>{{planet.id}}</td>
-                <td>{{planet.nombrePlaneta}}</td>
-                <td>{{planet.descripcionPlaneta}}</td>
-                <td><a [routerLink]="['/planet/view', player.id, star.id, planet.id]">Go!!</a></td>
+            <tr *ngFor="let productXplanet of productsXplanet">
+                <td>{{productXplanet.id}}</td>
+                <td>{{productXplanet.productoNombre}}</td>
+                <td>{{productXplanet.factor_Demanda}}</td>
+                <td>{{productXplanet.stock}}</td>
+                <td><a [routerLink]="['/player/list']">Back!!</a></td>
             </tr>
         </tbody>
-    </table> -->
+    </table>
+    
 
 
 </div>

@@ -7,6 +7,7 @@ import { Ship } from '../model/ship';
 import { Star } from '../model/star';
 import { Planet } from '../model/planet';
 import { Product } from '../model/product';
+import { ProductoxPlaneta } from '../model/productoxplaneta';
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +53,10 @@ export class PlayerService {
 
   cargaPlaneta(id: number): Observable<Planet> {
     return this.http.get<Planet>(`${environment.serverUrl}/api/planet/view/${id}`)
+  }
+
+  listarProductosPlanetas(id:number): Observable<ProductoxPlaneta[]> {
+    return this.http.get<ProductoxPlaneta[]>(`${environment.serverUrl}/api/planet/list/product/${id}`)
   }
 
   listarProductos(): Observable<Product[]> {

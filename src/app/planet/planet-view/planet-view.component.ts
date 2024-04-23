@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Planet } from '../../model/planet';
 import { Star } from '../../model/star';
 import { Player } from '../../model/player';
+import { ProductoxPlaneta } from '../../model/productoxplaneta';
 
 @Component({
   selector: 'app-planet-view',
@@ -15,6 +16,7 @@ export class PlanetViewComponent {
   player: Player = new Player(0," "," "," ");
   star: Star = new Star(0," ",0,0,0,0);
   planet: Planet = new Planet(0, " ", " ");
+  productsXplanet: ProductoxPlaneta[] = [];
  
 
   constructor(
@@ -50,6 +52,7 @@ export class PlanetViewComponent {
   @Input()
   set planetId(planetId: string) {
     this.playerService.cargaPlaneta(parseInt(planetId, 10)).subscribe(planeta => this.planet = planeta);
+    this.playerService.listarProductosPlanetas(parseInt(planetId, 10)).subscribe(productosxplanetas => this.productsXplanet = productosxplanetas);
   }
 
 }
