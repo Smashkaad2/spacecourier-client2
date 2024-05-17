@@ -1,9 +1,11 @@
 <div>
+    
     <h1>Planeta Detalles</h1>
     <p>A continuación verás un unico planeta y sus atributos</p>
 
     <ul>
         <li>Nombre Planeta: {{planet.nombrePlaneta}}</li>
+        <li>Player: {{player.username}}
     </ul>
 
     <table>
@@ -12,7 +14,9 @@
                 <th>Id</th>
                 <th>Productos</th>
                 <th>factor_Demanda</th>
+                <th>factorOferta</th>
                 <th>Stock</th>
+                <th>Productoid</th>
                 <th>Viajar</th>
 
             </tr>
@@ -22,12 +26,16 @@
                 <td>{{productXplanet.id}}</td>
                 <td>{{productXplanet.productoNombre}}</td>
                 <td>{{productXplanet.factor_Demanda}}</td>
+                <td>{{productXplanet.factorOferta}}</td>
                 <td>{{productXplanet.stock}}</td>
-                <td><a [routerLink]="['/player/list']">Back!!</a></td>
+                <td>{{productXplanet.productoid}}</td>
+                <td> <button type="submit" (click)="comprarObjetos(productXplanet,player)">
+                        Buy!!
+                    </button></td>
             </tr>
         </tbody>
     </table>
-    
+
 
 
 </div>

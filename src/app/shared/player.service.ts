@@ -63,4 +63,8 @@ export class PlayerService {
     return this.http.get<Product[]>(`${environment.serverUrl}/api/product/list`)
   }
 
+  addProductoANave(idNave:number, idProducto: number, stock: number): Observable<String> {
+    return this.http.put<String>(`${environment.serverUrl}/api/ship/addProducto/${idNave}/${idProducto}/${stock}`, "")
+  }
+
 }
