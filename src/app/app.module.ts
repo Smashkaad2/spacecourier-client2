@@ -14,6 +14,7 @@ import { StarNearlistComponent } from './star/star-nearlist/star-nearlist.compon
 import { StarViewComponent } from './star/star-view/star-view.component';
 import { PlanetViewComponent } from './planet/planet-view/planet-view.component';
 import { ProductViewComponent } from './product/product-view/product-view.component';
+import { SinginscreenComponent } from './singin/singinscreen/singinscreen.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductViewComponent } from './product/product-view/product-view.compon
     StarNearlistComponent,
     StarViewComponent,
     PlanetViewComponent,
-    ProductViewComponent
+    ProductViewComponent,
+    SinginscreenComponent
   ],
   imports: [
     BrowserModule,

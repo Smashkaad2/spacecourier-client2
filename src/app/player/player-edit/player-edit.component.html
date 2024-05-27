@@ -1,9 +1,36 @@
 <div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Azul claro */
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #ffdd44; /* Amarillo limón */
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffd700;
+        }
+    </style>
     <form (ngSubmit)="actualizarPlayer()">
         <input type="text" name="Username" id="txtUsername" [(ngModel)]="player.username">
         <input type="text" name="Rol" id="txtNombre" [(ngModel)]="player.rol">
-        <button type="submit">
-            Guardar
-        </button>
+        <button type="submit">Guardar</button>
     </form>
 </div>

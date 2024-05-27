@@ -1,13 +1,75 @@
-<div>
-    <form (ngSubmit)="okForward()">
-        <ul>
-            <li>{{player.username}}</li>
-            <li>{{player.rol}}</li>
-            <li>{{ship.ship_name}}</li>
-            <li>{{ship.creditos}}</li>
-            <button type="submit">
-                Ok!!
-            </button>
-        </ul>
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugador Elegir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Azul claro */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #ffdd44; /* Amarillo limón */
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form (ngSubmit)="okForward()">
+            <ul>
+                <li>Jugador: {{player.username}}</li>
+                <li>Rol: {{player.rol}}</li>
+                <li>Nave: {{ship.ship_name}}</li>
+                <li>Creditos Nave: {{ship.creditos}}</li>
+            </ul>
+            <button type="submit">Ok!!</button>
+            <button type="button" (click)="editPlayer()">Editar Jugador</button>
+        </form>
+    </div>
+
+    <script>
+        // Asegúrate de importar el Router en tu componente TypeScript
+        import { Router } from '@angular/router';
+        
+        export class JugadorElegirComponent {
+            constructor(private router: Router) {}
+
+            okForward() {
+                // Lógica de okForward
+            }
+
+            editPlayer() {
+                this.router.navigate([`/player/edit/${this.player.id}`]);
+            }
+        }
+    </script>
+</body>
+</html>

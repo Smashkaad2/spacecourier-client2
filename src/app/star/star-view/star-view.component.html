@@ -1,6 +1,46 @@
 <div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Azul claro */
+            color: #333;
+        }
+        h1 {
+            color: #007bff; /* Azul */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ffdd44; /* Amarillo limón */
+        }
+        td {
+            background-color: #fff;
+        }
+        a {
+            color: #007bff; /* Azul */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
     <h1>Estrella Detalles</h1>
-    <p>A continuación verás una unica Estrella y sus atributos</p>
+    <p>A continuación verás una única Estrella y sus atributos</p>
 
     <ul>
         <li>Nombre Estrella: {{star.nombre_estrella}}</li>
@@ -13,7 +53,6 @@
                 <th>Nombre Planeta</th>
                 <th>Descripcion</th>
                 <th>Viajar</th>
-
             </tr>
         </thead>
         <tbody>
@@ -25,6 +64,4 @@
             </tr>
         </tbody>
     </table>
-
-
 </div>

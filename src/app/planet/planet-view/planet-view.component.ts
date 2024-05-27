@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { PlayerService } from '../../shared/player.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Planet } from '../../model/planet';
@@ -26,6 +26,8 @@ export class PlanetViewComponent {
     private router: Router,
     private route: ActivatedRoute
   ) { }
+
+  @ViewChild('buyButton') buyButton: any;
 
   ngOnInit(): void {
 
@@ -55,6 +57,10 @@ export class PlanetViewComponent {
   set planetId(planetId: string) {
     this.playerService.cargaPlaneta(parseInt(planetId, 10)).subscribe(planeta => this.planet = planeta);
     this.playerService.listarProductosPlanetas(parseInt(planetId, 10)).subscribe(productosxplanetas => this.productsXplanet = productosxplanetas);
+  }
+
+  isPilot(): boolean {
+    return this.player.rol === 'piloto';
   }
 
   comprarObjetos(productActual: ProductoxPlaneta, playerActual: Player) {

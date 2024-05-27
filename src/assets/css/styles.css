@@ -1,0 +1,49 @@
+/* assets/css/styles.css */
+body {
+    background-image: url('../images/a.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff; /* Para asegurar que el texto sea legible sobre el fondo */
+}
+
+div {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para los divs */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffdd44; /* Amarillo limón */
+}
+
+button, a.button {
+    background-color: #ffdd44; /* Amarillo limón */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+}
+
+button:hover, a.button:hover {
+    background-color: #ffd700;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffdd44; /* Amarillo limón */
+}

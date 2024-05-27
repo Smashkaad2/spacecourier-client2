@@ -15,8 +15,8 @@
                 <td>{{player.id}}</td>
                 <td>{{player.username}}</td>
                 <td>{{player.rol}}</td>
-                <td><a [routerLink]="['/player/select', player.id]">Elegir</a></td>
-                <td><a [routerLink]="['/player/edit', player.id]">Editar</a></td>
+                <td><button (click)="defineRol(player.rol,player.id)">Elegir</button></td>
+                <td><button [routerLink]="['/player/edit', player.id]">Editar</button></td>
             </tr>
         </tbody>
     </table>

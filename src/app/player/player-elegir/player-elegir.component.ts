@@ -30,6 +30,11 @@ export class PlayerElegirComponent {
   okForward() {
     this.router.navigate(['/menu/buttons', this.player.id]);
   }
+
+  
+  editPlayer() {
+    this.router.navigate([`/player/edit/${this.player.id}`]);
+  }
   
 
 }

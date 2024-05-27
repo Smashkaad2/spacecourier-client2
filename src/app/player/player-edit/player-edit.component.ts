@@ -26,7 +26,7 @@ export class PlayerEditComponent {
 
   actualizarPlayer() {
     this.playerService.editarJugadores(this.player.id, this.player).subscribe(jugador => console.log(this.player));
-    this.router.navigate(['/player/list'])
+    this.router.navigate(['player/select/', this.player.id]);
   }
 
 }

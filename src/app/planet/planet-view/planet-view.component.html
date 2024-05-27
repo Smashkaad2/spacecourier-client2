@@ -1,41 +1,129 @@
-<div>
-    
-    <h1>Planeta Detalles</h1>
-    <p>A continuación verás un unico planeta y sus atributos</p>
+<!DOCTYPE html>
+<html lang="es">
 
-    <ul>
-        <li>Nombre Planeta: {{planet.nombrePlaneta}}</li>
-        <li>Player: {{player.username}}
-    </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeta Detalles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            /* Azul claro */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Productos</th>
-                <th>factor_Demanda</th>
-                <th>factorOferta</th>
-                <th>Stock</th>
-                <th>Productoid</th>
-                <th>Viajar</th>
+        div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let productXplanet of productsXplanet">
-                <td>{{productXplanet.id}}</td>
-                <td>{{productXplanet.productoNombre}}</td>
-                <td>{{productXplanet.factor_Demanda}}</td>
-                <td>{{productXplanet.factorOferta}}</td>
-                <td>{{productXplanet.stock}}</td>
-                <td>{{productXplanet.productoid}}</td>
-                <td> <button type="submit" (click)="comprarObjetos(productXplanet,player)">
-                        Buy!!
-                    </button></td>
-            </tr>
-        </tbody>
-    </table>
+        h1 {
+            color: #007bff;
+            /* Azul */
+        }
 
+        p {
+            margin-bottom: 20px;
+        }
 
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
 
-</div>
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ffdd44;
+            /* Amarillo limón */
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        button {
+            background-color: #ffdd44;
+            /* Amarillo limón */
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffd700;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Planeta Detalles</h1>
+        <p>A continuación verás un único planeta y sus atributos</p>
+
+        <ul>
+            <li>Nombre Planeta: {{planet.nombrePlaneta}}</li>
+            <li>Player: {{player.username}}</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Productos</th>
+                    <th>factor_Demanda</th>
+                    <th>factorOferta</th>
+                    <th>Stock</th>
+                    <th>Productoid</th>
+                    <th>Comprar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let productXplanet of productsXplanet">
+                    <td>{{productXplanet.id}}</td>
+                    <td>{{productXplanet.productoNombre}}</td>
+                    <td>{{productXplanet.factor_Demanda}}</td>
+                    <td>{{productXplanet.factorOferta}}</td>
+                    <td>{{productXplanet.stock}}</td>
+                    <td>{{productXplanet.productoid}}</td>
+                    <td>
+                        <button #buyButton type="submit" (click)="comprarObjetos(productXplanet, player)"
+                            [disabled]="isPilot()">
+                            Buy!!
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
